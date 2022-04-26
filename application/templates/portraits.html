@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>PORTRAITS</title>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Style the Image Used to Trigger the Modal */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.image-container {
+  width: 100%;
+  height: 70%;
+  columns: 4;
+}
+
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    max-width: 100%;
+    padding: 1px;
+    }
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 70%;
+    max-width: 1000px;
+    position: relative;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+.image-wrapper {
+  position: absolute;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 20px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: relative;
+  top: 0;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Trigger the Modal -->
+<div class="image-container">
+<img class="myImg" src="static/images/portraits/IMG_4219.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/20210806173308_IMG_2598 (1).jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/20220102171402_IMG_4272.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/20200523202157_IMG_9145 (1).jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+<img class="myImg" src="static/images/family/20210816122750_IMG_2928.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+<img class="myImg" src="static/images/family/20220228141841_IMG_4583.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/20210703212318_IMG_2203 (1).jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/lrg_40665_1420737226.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/images.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/20210313172146_IMG_0816.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/battersea.jpg" onclick="openModal();currentSlide(11)" class="hover-shadow">
+<img class="myImg" src="static/images/family/20210721113055_IMG_2451 (3).jpg" onclick="openModal();currentSlide(12)" class="hover-shadow">
+<img class="myImg" src="static/images/family/20220228140455_IMG_4503.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow">
+<img class="myImg" src="static/images/family/20210816124436_IMG_3015.jpg" onclick="openModal();currentSlide(14)" class="hover-shadow">
+<img class="myImg" src="static/images/family/20210816182545_IMG_3251.jpg" onclick="openModal();currentSlide(15)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/kmp-yorkshire-family-photography-9.jpg" onclick="openModal();currentSlide(16)" class="hover-shadow">
+<img class="myImg" src="static/images/family/20200523190809_IMG_8871.jpg" onclick="openModal();currentSlide(17)" class="hover-shadow">
+<img class="myImg" src="static/images/gallery/20220228142811_IMG_4632.jpg" onclick="openModal();currentSlide(18)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/dog-5723334_1280.jpg" onclick="openModal();currentSlide(19)" class="hover-shadow">
+<img class="myImg" src="static/images/gallery/20210806180418_IMG_2724 (1).jpg" onclick="openModal();currentSlide(20)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/Nikon-105mm-f1.jpg" onclick="openModal();currentSlide(21)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/20220410121429_IMG_5225.jpg" onclick="openModal();currentSlide(22)" class="hover-shadow">
+<img class="myImg" src="static/images/gallery/20210317163926_IMG_0872.jpg" onclick="openModal();currentSlide(23)" class="hover-shadow">
+<img class="myImg" src="static/images/gallery/20210818173514_IMG_3340.jpg" onclick="openModal();currentSlide(24)" class="hover-shadow">
+<img class="myImg" src="static/images/gallery/20210816123618_IMG_2971 (1).jpg" onclick="openModal();currentSlide(25)" class="hover-shadow">
+<img class="myImg" src="static/images/gallery/20200823195832_IMG_9645.jpg"  onclick="openModal();currentSlide(26)" class="hover-shadow">
+<img class="myImg" src="static/images/family/20200209143046_IMG_8658.jpg" onclick="openModal();currentSlide(27)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/20201130165115_IMG_0580.jpg" onclick="openModal();currentSlide(28)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/warren-wong.jpg" onclick="openModal();currentSlide(29)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/photography_girl_portrait.jpg" onclick="openModal();currentSlide(30)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/20191118_1.jpg" onclick="openModal();currentSlide(31)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/20210317163659_IMG_0860.jpg" onclick="openModal();currentSlide(32)" class="hover-shadow">
+<img class="myImg" src="static/images/family/20200328152641_IMG_8836.jpg" onclick="openModal();currentSlide(33)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/Baby-Photography-Studio_.jpg" onclick="openModal();currentSlide(34)" class="hover-shadow">
+<img class="myImg" src="static/images/gallery/IMG_4706.jpg" onclick="openModal();currentSlide(35)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/portraitspic.jpg" onclick="openModal();currentSlide(36)" class="hover-shadow">
+<img class="myImg" src="static/images/family/20200523200949_IMG_9107.jpg" onclick="openModal();currentSlide(37)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/beginner_portrait.jpg" onclick="openModal();currentSlide(38)" class="hover-shadow">
+<img class="myImg" src="static/images/gallery/photo-1617331140180-e8262094733a.jpg" onclick="openModal();currentSlide(39)" class="hover-shadow">
+<img class="myImg" src="static/images/family/20210816180035_IMG_3214 (1).jpg" onclick="openModal();currentSlide(40)" class="hover-shadow">
+<img class="myImg" src="static/images/family/20210511195537_IMG_1478.jpg" onclick="openModal();currentSlide(41)" class="hover-shadow">
+<img class="myImg" src="static/images/family/20210511200622_IMG_1534 (1).jpg" onclick="openModal();currentSlide(42)" class="hover-shadow">
+<img class="myImg" src="static/images/portraits/555bed5ca448927f0149d151964486de.jpg" onclick="openModal();currentSlide(43)" class="hover-shadow">
+<img class="myImg" src="static/images/family/20210818173425_IMG_3332.jpg" onclick="openModal();currentSlide(44)" class="hover-shadow">
+
+</div> <!-- end image-container div -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+        <div class="numbertext"> 1 / 44 </div>
+        <img src="static/images/portraits/IMG_4219.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 2 / 44 </div>
+        <img src="static/images/portraits/20210806173308_IMG_2598 (1).jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 3 / 44 </div>
+        <img src="static/images/portraits/20220102171402_IMG_4272.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 5 / 44 </div>
+        <img src="static/images/family/20210816122750_IMG_2928.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 6 / 46</div>
+        <img src="static/images/family/20220228141841_IMG_4583.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 7 / 44 </div>
+        <img src="static/images/portraits/20210703212318_IMG_2203 (1).jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 8 / 44 </div>
+        <img src="static/images/portraits/lrg_40665_1420737226.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 9 / 44 </div>
+        <img src="static/images/portraits/images.jpg" style="width 100%">
+    </div>
+      <div class="mySlides">
+    <div class="numbertext"> 10 / 44 </div>
+        <img src="static/images/portraits/20210313172146_IMG_0816.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 11 / 44 </div>
+        <img src="static/images/portraits/battersea.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 12 / 44 </div>
+        <img src="static/images/family/20210721113055_IMG_2451 (3).jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 13 / 44 </div>
+        <img src="static/images/family/20220228140455_IMG_4503.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 14 / 44 </div>
+        <img src="static/images/family/20210816124436_IMG_3015.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 15 / 44 </div>
+        <img src="static/images/family/20210816182545_IMG_3251.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 16 / 44 </div>
+        <img src="static/images/portraits/kmp-yorkshire-family-photography-9.jpg"style="width 100%">
+    </div>
+    <div class="numbertext"> 17 / 44 </div>
+        <img src="static/images/family/20200523190809_IMG_8871.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 18 / 44 </div>
+        <img src="static/images/gallery/20220228142811_IMG_4632.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 19 / 44 </div>
+        <img src="static/images/portraits/dog-5723334_1280.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 20 / 44 </div>
+        <img src="static/images/gallery/20210806180418_IMG_2724 (1).jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 21 / 46</div>
+        <img src="static/images/portraits/Nikon-105mm-f1.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 22 / 46</div>
+        <img src="static/images/portraits/20220410121429_IMG_5225.jpg" style="width:100%">
+    </div>
+     <div class="mySlides">
+        <div class="numbertext"> 23 / 44 </div>
+        <img src="static/images/gallery/20210317163926_IMG_0872.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 24 / 44 </div>
+        <img src="static/images/gallery/20210818173514_IMG_3340.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 25 / 44 </div>
+        <img src="static/images/gallery/20210816123618_IMG_2971 (1).jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 26 / 44 </div>
+        <img src="static/images/gallery/20200823195832_IMG_9645.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 27 / 44 </div>
+        <img src="static/images/family/20200209143046_IMG_8658.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 28 / 44 </div>
+        <img src="static/images/portraits/20201130165115_IMG_0580.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 29 / 44 </div>
+        <img src="static/images/portraits/warren-wong.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 30 / 44 </div>
+        <img src="static/images/portraits/photography_girl_portrait.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 31 / 44 </div>
+        <img src="static/images/portraits/20191118_1.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 32 / 46</div>
+        <img src="static/images/portraits/20210317163659_IMG_0860.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 33 / 46</div>
+        <img src="static/images/family/20200328152641_IMG_8836.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 34 / 44 </div>
+        <img src="static/images/portraits/Baby-Photography-Studio_.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 35 / 44 </div>
+        <img src="static/images/gallery/IMG_4706.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 36 / 44 </div>
+        <img src="static/images/portraits/portraitspic.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 37 / 44 </div>
+        <img src="static/images/family/20200523200949_IMG_9107.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 38 / 46</div>
+        <img src="static/images/portraits/beginner_portrait.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 39 / 44 </div>
+        <img src="static/images/gallery/photo-1617331140180-e8262094733a.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 40 / 44 </div>
+        <img src="static/images/family/20210816180035_IMG_3214 (1).jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 41 / 44 </div>
+        <img src="static/images/family/20210511195537_IMG_1478.jpg" style="width 100%">
+    </div>
+      <div class="mySlides">
+    <div class="numbertext"> 42 / 44 </div>
+        <img src="static/images/family/20210511200622_IMG_1534 (1).jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 43 / 44 </div>
+        <img src="static/images/portraits/555bed5ca448927f0149d151964486de.jpg" style="width 100%">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext"> 44 / 44 </div>
+        <img src="static/images/family/20210818173425_IMG_3332.jpg" style="width 100%">
+    </div>
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
+</html>

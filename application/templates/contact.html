@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+</head>
+<body>
+{% extends "layout.html" %}
+{% block body_content %}
+
+   <h3>
+  Contact Us:
+  <small class="text-muted">contact@timeless.com</small>
+</h3><br>
+
+    <div class="form">
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+
+                <div class="name">
+                {{ form.fullname.label }} {{ form.fullname }}
+                    <ul>{% for error in form.fullname.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+               </div>
+
+                <div class="email">
+                {{ form.email.label }} {{ form.email }}
+                <ul> {% for error in form.email.errors %}
+                 <li style="color:red;">{{ error }}</li>
+                {% endfor %} </ul>
+               </div>
+
+               <div class="tele">
+                {{ form.telephone.label }} {{ form.telephone }}
+               </div>
+                <br>
+               <div class="project-date">
+                {{ form.project_date.label }} {{ form.project_date }}
+               </div>
+                <br>
+               <div class="location">
+                {{ form.location.label }} {{ form.location }}
+               </div>
+                <br>
+                <div class="budget">
+                {{ form.budget.label }} {{ form.budget }}
+                </div>
+                <br>
+                <div class="details">
+                {{ form.detail.label }}<br>
+                {{ form.detail }}
+                 </div>
+
+                <br>
+                <div class="service">
+                {{ form.services.label }} {{ form.services }}
+
+                </div>
+
+                <br>
+                <div class="recommended">
+                   {{ form.recommend.label }} {{ form.recommend }}
+                </div>
+                <br>
+
+
+                <div class="submit">
+                    {{ form.submit }}
+                    {{ message }}
+                </div>
+                <br>
+
+            </form>
+    </div>
+{% endblock %}
+
+</body>
+</html>
+

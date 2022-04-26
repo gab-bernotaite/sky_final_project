@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:ital,wght@0,100;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:wght@100&display=swap');
+
+
+<!--make h6 bigger for packages pricing-->
+    #package_containers {
+    text-align: center;
+    }
+<!--could not create classes for packages - did not work, so had to make duplicate ids-->
+<!--the below package id styles can't be changed otherwise background colour is lost - why?-->
+<!--package { -->
+<!--    background-color: #ffe66d;-->
+<!--    height: 100%-->
+<!--    width: 100%-->
+<!--    }-->
+      @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+      h1 {
+      font-family: 'Amatic SC', cursive;
+      color: #463f3a;
+      padding-top: 50px;
+      padding-right: 50px;
+      padding-left: 110px;
+      padding-bottom: 40px;
+      }
+    #package {
+    display: inline-block;
+    width:30%
+    vertical-align: center;
+    background-color: #bcb8b1;
+    color: #463f3a;
+    }
+
+    h5, h6 {
+    font-family: Amatic SC, cursive;
+    font-size: 60px;
+    color: #463f3a;
+    }
+
+    p, li {
+    color: #463f3a;
+    font-family: 'Roboto', sans-serif;
+    }
+
+    p {
+    font-size: 18px;
+    }
+
+<!--    li {-->
+<!--    color: #463f3a;-->
+<!--    font-family: 'Roboto', sans-serif;-->
+<!--    }-->
+
+
+    #package:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+	position:relative;
+	top:-.4em;
+	background:#ff6b6b;
+	}
+
+    #package_information {
+    text-align: center;
+    }
+    #booking {
+    background-color: #f4f3ee;
+    }
+    #payment {
+    background-color: #f4f3ee;
+    }
+
+    #booking{
+    margin:auto;
+    }
+    #payment{
+    margin:auto;
+    }
+.slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%
+    display: grid;
+    place-items: centre;
+    overflow: hidden;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 9));
+    }
+}
+
+.slide{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+img {
+    width: 100%
+}
+
+img:hover {
+    transform: translateZ(20px);
+}
+
+
+.slider::before,
+.slider::after {
+   background: linear-gradient (to right, rgba(255,255,255,1) 0%,
+   rgba(255,255,255,0) 100):
+   content: '';
+   height: 100x;
+   position: absolute;
+   width: 15;
+   z-index: 2;
+}
+
+.slider::before {
+   Left: 0;
+   top: 0;
+}
+
+.slider::after {
+   right: 0;
+   top: 0;
+   transform: rotateZ(180deg);
+
+}
+
+.slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%
+    display: grid;
+    place-items: centre;
+    overflow: hidden;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 9));
+    }
+}
+
+.slide{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+img {
+    width: 100%
+}
+
+img:hover {
+    transform: translateZ(20px);
+}
+
+
+.slider::before,
+.slider::after {
+   background: linear-gradient (to right, rgba(255,255,255,1) 0%,
+   rgba(255,255,255,0) 100):
+   content: '';
+   height: 100x;
+   position: absolute;
+   width: 15;
+   z-index: 2;
+}
+
+.slider::before {
+   Left: 0;
+   top: 0;
+}
+
+.slider::after {
+   right: 0;
+   top: 0;
+   transform: rotateZ(180deg);
+   }
+
+
+<!--    #booking_payment {-->
+<!--    height: 100%;-->
+<!--    width: 100%;-->
+<!--    }-->
+<!--    h1 {-->
+<!--    text-align: center;-->
+<!--    @media (min-width: 768px) {-->
+<!--    #booking_payment {-->
+<!--    display: flex;-->
+<!--    flex-wrap: wrap;-->
+<!--    }-->
+<!--    }-->

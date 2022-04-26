@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Timeless Treasures</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/home.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+{% extends "layout.html" %}
+{% block body_content %}
+<br>
+<br>
+  <div class="container">
+    <div>
+      <h1 class="text-md-center" style="color: #463f3a; font-family: 'Amatic SC', cursive; font-size: 100px;">Timeless Treasures Photography</h1>
+
+<br>
+<br>
+<br>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="static/images/weddings/WeddingsCover-1400x935.jpg">
+          </div>
+          <div class="item">
+            <img src="static/images/shop/london-childrens-photographer-004-1226x818.jpg">
+          </div>
+          <div class="item">
+             <img src="static/images/gallery/20210818173514_IMG_3340.jpg">
+          </div>
+          <div class="item">
+            <img src="static/images/weddings/2019_11_15_82438_1573807361.jpg">
+          </div>
+          <div class="item">
+            <img src="static/images/shop/20220102165241_IMG_4214 (1).jpg">
+          </div>
+          <div class="item">
+            <img src="static/images/portraits/kmp-yorkshire-family-photography-9.jpg">
+          </div>
+          <div class="item">
+            <img src="static/images/gallery/20210422183251_IMG_1091 (1).jpg">
+          </div>
+          <div class="item">
+            <img src="static/images/family/20210816182545_IMG_3251.jpg">
+          </div>
+          <div class="item">
+            <img src="static/images/gallery/20210806180418_IMG_2724 (1).jpg">
+          </div>
+          <div class="item">
+            <img src="static/images/portraits/20220102171402_IMG_4272.jpg">
+          </div>
+          <div class="item">
+            <img src="static/images/family/20200209143046_IMG_8658.jpg">
+          </div>
+          <div class="item">
+            <img src="static/images/family/20210816122750_IMG_2928.jpg">
+          </div>
+          <div class="item">
+            <img src="static/images/family/20210511200622_IMG_1534 (1).jpg">
+          </div>
+          <div class="item">
+            <img src="static/images/shop/Screenshot_20211207-193435_WhatsApp.jpg">
+          </div>
+          <div class="item">
+            <img src="static/images/gallery/20210816123618_IMG_2971 (1).jpg">
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="text-center" style="font-family:'Roboto', sans-serif; font-size: 20px; color: #463F3A;">
+      <p>"Photography is the art of teleporting the past into the future"</p>
+      <em> - Mehmet Murat Ildan </em>
+    </div>
+    <br>
+    <br>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+  <script type="text/javascript">
+  var $ = jQuery.noConflict();
+  $(document).ready(function() {
+    $('#myCarousel').carousel({ interval: 2500, cycle: true });
+  });
+  </script>
+  </div>
+<br>
+<br>
+{% endblock %}
+</body>
+</html>

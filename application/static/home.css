@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:ital,wght@0,100;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+  --white: #D9CAB3;
+  --burgundy: #5E0B15;
+  --red:#90323D;
+  --yellow: #FFE66D;
+  --blush: #FF6B6B;
+  --mint_white: #F7FFF7;
+  --dark_brown: #463F3A;
+  --dark_medium: #8A817C;
+  --light_medium: #BCB8B1;
+  --light: #F4F3EE;
+}
+
+.sticky{
+  position: sticky;
+  top:10px;
+  z-index: 100;
+}
+
+.res{
+  max-width: 100%;
+  height: auto;
+}
+
+.jumbotron{
+  margin-top: 20px;
+  background-image: url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/05/22/13/gin-cocktails.jpg?w968h681);
+  background-size:cover;
+  background-position: center;
+  filter: blur(0px);
+  text-shadow: 0px 0px 6px black;
+  color: white;
+}
+
+.rounded mr-2{
+  max-width: 5%;
+  max-height: 5%;
+}
+
+
+.fa-facebook-square:hover {
+        color: #3b5998;
+        -o-transition:.5s;
+        -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
+    }
+
+.fa-instagram:hover {
+  color: #E32E80;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+.fa-twitter-square:hover {
+  color: #52A8E6;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+.fa-facebook-square{
+        -o-transition:.5s;
+        -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 90%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.lastimage {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.image:hover {
+  opacity: 0.3;
+}
+
+.lastimage:hover {
+  opacity: 0.3;
+}
+
+.middle:hover {
+  opacity: 0.3;
+}
+
+
+.footer {
+  text-align: center;
+}
+
+#toastimage {width: 16px;
+height: 16px}
+
+.footer {
+  text-align: center;
+}
+
+.list-inline li {
+display: inline-block;
+padding-right: 5px;
+padding-left: 5px;
+margin-bottom: 10px;
+}
+
+.social-icons .fa {
+font-size: 1.8em;
+}
+
+.social-icons .fa {
+width: 50px;
+height: 50px;
+line-height: 50px;
+text-align: center;
+color: red;
+}
+
+.social-icons.icon-circle .fa{
+border-radius: 50%;
+}
+
+.social-icons .fa-facebook{
+  background-color:#3C599F;
+}
+
+.social-icons .fa-instagram{
+  background-color:#A1755C;
+}
+
+.social-icons .fa-twitter{
+  background-color:#32CCFE;
+}
+
+.sticky {
+  position: sticky;
+  top:10px;
+  z-index: 100;
+}
+
+.carouselProperties, .carouselProperties img{
+  height: 450px !important;
+  width: 100% !important;
+  margin-left: 0%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column{
+  margin-top: 50px;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px !important; /* Should be removed. Only for demonstration */
+}
+
+.column img{
+  width: 100%;
+  min-height: 300px;
+  max-height: 300px;
+  margin-bottom: 300px;
+  overflow: hidden;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h2, h3{
+  text-align: center;
+}
+
+
+#myBtn {
+  position: fixed;
+  right:    50px;
+  bottom:   50px;
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+.mask-custom {
+backdrop-filter: blur(5px);
+background-color: rgba(255, 255, 255, .15);
+}
+
+
+html, body {
+margin: 0px;
+padding: 0px;
+width: 100%;
+height: 100%;
+}
+
+.wrapper {
+ margin: 0 auto;
+ width: 100%;
+}
+
+
+html {
+  background-color: #F7FFF7;
+  font-family: 'Roboto', sans-serif;
+  }
+.carousel-item img {width: 100%; height: 200px;}

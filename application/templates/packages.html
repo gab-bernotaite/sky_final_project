@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Packages</title>
+    <link rel="stylesheet" href="static/packages.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+      h1 {
+      font-family: 'Amatic SC', cursive;
+      color: #463f3a;
+      padding-top: 50px;
+      padding-right: 50px;
+      padding-left: 110px;
+      padding-bottom: 40px;
+      }
+    #package {
+    display: inline-block;
+    width:30%
+    vertical-align: center;
+    background-color: #bcb8b1;
+    color: #463f3a;
+    }
+
+    h5, h6 {
+    font-family: Amatic SC, cursive;
+    font-size: 60px;
+    color: #463f3a;
+    }
+
+    p, li {
+    color: #463f3a;
+    font-family: 'Roboto', sans-serif;
+    }
+
+    p {
+    font-size: 18px;
+    }
+
+    #package:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+	position:relative;
+	top:-.4em;
+	background:#ff6b6b;
+	}
+
+<!--    li {-->
+<!--    color: #463f3a;-->
+<!--    font-family: 'Roboto', sans-serif;-->
+<!--    }-->
+
+    </style>
+</head>
+
+<body>
+{% extends "layout.html" %}
+{% block body_content %}
+<!--header to include title 'Packages' and nav bar-->
+<h1 class="text-md-center" style="font-size: 5.7em;">Timeless Treasures Packages </h1>
+<!--please add slides here-->
+ <div class="slider">
+     <div id="slider" class="slide-track">
+       <!-- 9 SLIDES-->
+         <div class="slide">
+             <img src='static/images/shop/london-childrens-photographer-004-1226x818.jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/gallery/20210818173514_IMG_3340.jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/portraits/kmp-yorkshire-family-photography-9.jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/gallery/20210422183251_IMG_1091 (1).jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/gallery/20220228142811_IMG_4632.jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/gallery/20210806180418_IMG_2724 (1).jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/portraits/20220102171402_IMG_4272.jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/family/20200209143046_IMG_8658.jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/family/20210816122750_IMG_2928.jpg'/>
+         </div>
+    <!--SAME SLIDE AS ABOVE JUST DOUBLED-->
+         <div class="slide">
+             <img src='static/images/shop/london-childrens-photographer-004-1226x818.jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/gallery/20210818173514_IMG_3340.jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/portraits/kmp-yorkshire-family-photography-9.jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/gallery/20210422183251_IMG_1091 (1).jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/gallery/20220228142811_IMG_4632.jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/gallery/20210806180418_IMG_2724 (1).jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/portraits/20220102171402_IMG_4272.jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/family/20200209143046_IMG_8658.jpg'/>
+         </div>
+         <div class="slide">
+             <img src='static/images/family/20210816122750_IMG_2928.jpg'/>
+         </div>
+     </div>
+ </div>
+<!--where do I add markup for rounding? <span class="rounded-circle"></span>-->
+<!--containers for packages-->
+<!--add text-center in class to individually center text in containers-->
+<!--how to make containers same heights with different number of rows-->
+<div class="container overflow-hidden" id="package_containers">
+    <div class="row gy-5 text-center">
+<!--        this empty container is needed to allow for enlargement space upon hover-->
+        <div class="col-xs-12 col-md-12 col-lg-12">
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <div class="w-100"></div>
+            <div class="p-3" id="package">
+                <h5 style="font-size: 60px;">Package 1</h5><h6 style="font-size:35px;">£100</h6>
+                <ul>
+                    <li>1 person</li>
+                    <li>45 minute session</li>
+                    <li>Up to 2 outfits</li>
+                    <li>5 digital, fully edited images</li>
+                </ul><br>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <div class="p-3" id="package">
+                <h5 style="font-size: 60px;">Package 2</h5><h6 style="font-size:35px;">£350</h6>
+                    <ul>
+                        <li>Up to 4 people</li>
+                        <li>60 minute session</li>
+                        <li>Up to 2 outfits</li>
+                        <li>15 digital, fully edited images</li>
+                        <li>3 prints</li>
+                    </ul>
+                </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <div class="p-3" id="package">
+                <h5 style="font-size: 60px;">Package 3</h5><h6 style="font-size:35px;">£500</h6>
+                <ul>
+                    <li>Up to 8 people</li>
+                    <li>100 minute session</li>
+                    <li>Up to 2 outfits</li>
+                    <li>20 digital, fully edited images</li>
+                        <li>5 prints</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <div class="p-3" id="package">
+                <h5 style="font-size: 60px;">Package 4</h5><h6 style="font-size:35px;">£850</h6>
+                <ul>
+                    <li>Up to 15 people</li>
+                    <li>140 minute session</li>
+                    <li>Up to 3 outfits</li>
+                    <li>35 digital, fully edited images</li>
+                    <li>8 prints</li>
+                </ul>
+            </div>
+            <div class="w-10"></div>
+        </div>
+        <div class="col-xs-12 col-md-12 col-lg-12">
+        </div>
+    </div>
+</div>
+
+<br>
+<!--container for next section-->
+
+<!--container for info-->
+
+<!--why is there no padding in small screens?-->
+<!--how do I make this container the same width as above containers?-->
+<div class="container overflow-hidden" id="package_information">
+    <div class="row gy-5 justify-content-center">
+        <div class="col-xs-12 col-md-10 col-lg-8">
+            <div class="p-3">
+                <p>
+                   We offer four different packages for our photoshoots. These can be customised to suit your needs, please contact us if you’d like a personalised quote. The prices of these packages are based on up to 1hr travel time from central London. We charge an additional £20 per further hour of travel.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+
+
+<!--container for booking and payment-->
+
+<!--how do I make these containers rounded?-->
+<!--how do I make these the same height? -- h-100 worked-->
+<div class="container overflow-hidden" id="booking_payment">
+    <div class="row equal gy-5 text-center justify-content-md-center align-text-middle">
+        <div class="col-xs-12 col-md-6 col-lg-6">
+            <div class="p-3 h-100" id="booking">
+                <div class="booking_payment">
+                    <h5 style="font-size: 60px">Booking</h5><br>
+                    <p>
+                    To book a package, please use the contact us page to email us the following:
+                    </p>
+                    <ul style="font-size:18px;">
+                        <li>Desired package if applicable</li>
+                        <li>The type of photoshoot you need – family/portrait/pet/home</li>
+                        <li>Date and location of your photoshoot</li>
+                        <li>Number of people in the session</li>
+                        <li>Any special requirements</li>
+                    </ul>
+                    <br>
+                    <p>We’ll get back to you with our availability and a personalised quote.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-6">
+            <div class="p-3 h-100" id="payment">
+                <div class="booking_payment">
+                    <h5 style="font-size: 60px;">Payment</h5><br>
+                    <br>
+                    <p>Once a date, location and cost of your photoshoot are agreed, you’ll be sent further information on the payment. We ask for a 10% non-refundable deposit to be paid in advance of your photoshoot to secure the date, the rest of the payment will be due once your photos are delivered. You’ll be asked to sign a contract which will outline the responsibilities for the photographer and yourself. To make a payment, please use your cart to add a custom amount.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<!--container for photoshoot preparation-->
+<div class="container overflow-hidden" id="photoshoot_preparation">
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div class="p-3">
+                <h5 style="font-size: 60px">Preparing for your photoshoot</h5><br>
+                <ul style="font-size: 18px;">
+                    <li>Pick out your clothes early, some guidance will be sent once you’ve booked a photoshoot</li>
+                    <li>Practice your hair and make-up, take some photos on your phone to see if you like this look. Please email us if you need hair and make-up assistance</li>
+                    <li>Avoid the sun or wear a sunscreen for a few days before your photoshoot</li>
+                    <li>Drink lots of water the day before and get plenty of rest</li>
+                    <li>Use a moisturising cream on your face and body on the day of the photoshoot</li>
+                    <li>Bring any props you’d like to use (please discuss these with us prior to your photoshoot)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
+</body>
+</html>
