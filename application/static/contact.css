@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:ital,wght@0,100;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+  --white: #D9CAB3;
+  --burgundy: #5E0B15;
+  --red:#90323D;
+  --yellow: #FFE66D;
+  --blush: #FF6B6B;
+  --mint_white: #F7FFF7;
+  --dark_brown: #463F3A;
+  --dark_medium: #8A817C;
+  --light_medium: #BCB8B1;
+  --light: #F4F3EE;
+  --cream: #F2EFDE;
+}
+
+
+body{background-color: var(--cream);
+
+}
+
+.text-muted{font-family: Roboto, EB Garamond, Serif;
+  font-size: 1.7em;
+  font-weight: 100;
+  margin-top: 30px;
+  margin-right: 150px;
+  margin-left: 50px;
+  text-align: left;
+  letter-spacing: -1px;
+  color: var(--dark_brown)
+  background-color: var(--white);
+}
+
+.form{font-family: Roboto, EB Garamond, Serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-left: 50px;
+  text-align: left;
+  color: var(--dark_brown)
+  background-color: var(--white);
+}
+
+h3 {font-family: Roboto, EB Garamond, Serif;
+  font-size: 1.7em;
+  font-weight: 100;
+  margin-left: 50px;
+  margin-top: 30px;
+  letter-spacing: -1px;
+  color: var(--dark_brown);
+}
+
+
+h1 {font-family: Amatic SC, Italiana, Serif;
+  font-size: 5.7em;
+  font-weight: 100;
+  margin-top: 50px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: var(--dark_brown);
+}
+
+h2 {font-family: Amatic, Italiana, Serif;
+  font-size: 4.7em;
+  font-weight: 100;
+  margin-top: 30px;
+  letter-spacing: -1px;
+  color: var(--dark_brown);
+}
+
+
+
+h5 {font-family: Roboto, Italiana, Serif;
+  font-size: 5.7em;
+  font-weight: 100;
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: var(--dark_brown);
+}
+
+h6 {font-family: Roboto, Italiana, Serif;
+  font-size: 5.7em;
+  font-weight: 100;
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: var(--dark_brown);
+}
+
+li {font-family: Roboto, Italiana, Serif;
+  font-size: 1rem;
+  font-weight: 400;
+
+  letter-spacing: -1px;
+  color: var(--dark_brown)
+}
+
+p {font-family: Roboto, EB Garamond, Serif;
+  font-size: 1.7em;
+  font-weight: 100;
+  margin-top: 30px;
+  /*margin-right: 150px;
+  margin-left: 150px;*/
+  text-align: center;
+  letter-spacing: -1px;
+  color: var(--dark_brown)
+}

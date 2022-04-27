@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 :root {
-  --white: #D9CAB3;
+  --white: #F2EFDE;
   --burgundy: #5E0B15;
   --red:#90323D;
   --yellow: #FFE66D;
@@ -14,15 +14,16 @@
   --dark_medium: #8A817C;
   --light_medium: #BCB8B1;
   --light: #F4F3EE;
+  --cream: #F2EFDE;
 }
 
-body{background-color: var(--white);;
+body{background-color: var(--cream);;
 }
 
 h1 {font-family: Amatic SC, Italiana, Serif;
   font-size: 5.7em;
   font-weight: 100;
-  margin-top: 30px;
+  margin-top: 80px;
   text-align: center;
   letter-spacing: -1px;
   color: var(--dark_brown);
@@ -63,11 +64,11 @@ li {font-family: Roboto, Italiana, Serif;
 }
 
 p {font-family: Roboto, EB Garamond, Serif;
-  font-size: 0.7em;
+  font-size: 1.0em;
   font-weight: 100;
   margin-top: 30px;
-  margin-right: 150px;
-  margin-left: 150px;
+  margin-right: 20px;
+  margin-left: 0px;
   text-align: center;
   letter-spacing: -1px;
   color: var(--dark_brown)
@@ -90,7 +91,7 @@ p {font-family: Roboto, EB Garamond, Serif;
 display: inline-block;
 width:30%
 vertical-align: center;
-background-color: #bcb8b1;
+background-color: #F2EFDE;
 }
 
 #package:hover {
@@ -108,11 +109,11 @@ text-align: center;
 }
 
 #booking {
-background-color: #f4f3ee;
+background-color: #F2EFDE;
 }
 
 #payment {
-background-color: #f4f3ee;
+background-color: #F2EFDE;
 }
 
 #booking{

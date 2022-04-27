@@ -1,3 +1,20 @@
+:root {
+  --white: #F2EFDE;
+  --burgundy: #5E0B15;
+  --red:#90323D;
+  --yellow: #FFE66D;
+  --blush: #FF6B6B;
+  --mint_white: #F7FFF7;
+  --dark_brown: #463F3A;
+  --dark_medium: #8A817C;
+  --light_medium: #BCB8B1;
+  --light: #F4F3EE;
+  --cream: #F2EFDE;
+}
+
+body{background-color: var(--cream);;
+}
+
 html {
   background-color: white;
   font-family: 'Roboto', sans-serif;
@@ -229,12 +246,10 @@ section {
 .lightbox .spinner {
   display: none;
 }
-a{font size: 10px}
+a{font-size: 25px}
 
-
-.form{
- padding: 10px 20px;
-  }
-
-
-
+.sticky{
+  position: sticky;
+  top:10px;
+  z-index: 100;
+}
