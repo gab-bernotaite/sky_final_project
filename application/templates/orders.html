@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "layout.html" %}
+    {% block body_content %}
+    <meta charset="UTF-8">
+    <title>Orders Page</title>
+</head>
+<body>
+<div>
+{% for order in order.orders %}
+   <p>{{order.project_date}} Location: cd{{order.location}}  Budget: {{order.budget}}
+            Details: {{order.details}}  Services: {{order.services}}
+            recommend: {{order.recommend}}</p>
+{% endfor %}
+    <br>
+    {{ message }}
+</div>
+</body>
+{% endblock %}
+</html>
