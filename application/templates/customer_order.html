@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body_content %}
+<h3>Customer and Order Details</h3>
+<p>{{customer.fullname}} </p>
+<div class="error_message">{{message}}</div>
+<div>
+   <ul>
+        <li>Customer Details: <br> Fullname: {{customer.fullname}} <br> Email {{customer.email}} <br>
+            Telephone: {{customer.telephone}} </li>
+    </ul>
+</div>
+<div>
+    {% for order in customer.orders %}
+    <ul>
+        <li>Order details: {{order.project_date}} Location: cd{{order.location}}  Budget: {{order.budget}}
+            Details: {{order.details}}  Services: {{order.services}}
+            recommend: {{order.recommend}}</li>
+    </ul>
+{% endfor %}
+</div>
+{% endblock %}
+{% block footer_content %}
+<footer>
+     &copy; 2021
+</footer>
+{% endblock %}
+
+

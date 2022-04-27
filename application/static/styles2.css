@@ -9,6 +9,10 @@ html {
     place-items: centre;
 }*/
 
+.image-container {
+margin-top: 200px;
+}
+
 .slider {
     height: 250px;
     margin: auto;

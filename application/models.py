@@ -18,6 +18,6 @@ class Order(db.Model):
     detail = db.Column(db.Text, nullable=False)
     services = db.Column(db.String(20), nullable=False)
     recommend = db.Column(db.String(20), nullable=False)
-    customer_id = db.Column(db.Integer, db.ForeignKey('customer.id'), nullable=False, autoincrement=True)
+    customer_id = db.Column(db.Integer, db.ForeignKey('customer.id'), nullable=False)
 
 

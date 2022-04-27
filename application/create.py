@@ -11,8 +11,11 @@ testPerson2 = Customer(email='sally_reed@yahoo.com', fullname='Sally Reed', tele
 order1 = Order(project_date=20220609, customer_id=1, location='Camden', budget=800,
                       detail='Professional', services='Other', recommend='Google')
 
+order2 = Order(project_date=20220923, customer_id=2, location='Richmond', budget=85,
+                      detail='One Professional Photo', services='Portrait Photoshoot', recommend='Social Media')
 
-orders = [order1]
+
+orders = [order1, order2]
 
 db.session.add(testPerson1)
 db.session.add(testPerson2)

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body_content %}
+<h3>Customer Details</h3>
+<p>{{customer.fullname}} {{customer.email}}</p>
+<div class="error_message">{{message}}</div>
+<div>
+    {% for customer in people %}
+    <ul>
+   <li>{{customer.fullname}} {{customer.email}} {{customer.telephone}}</li>
+        </ul>
+{% endfor %}
+</div>
+{% endblock %}

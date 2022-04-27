@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "layout.html" %}
+    {% block body_content %}
+    <meta charset="UTF-8">
+    <title>People Page</title>
+</head>
+<body>
+<div>
+{% for customer in people %}
+   <p>{{customer.id}} {{customer.fullname}} {{customer.email}} {{customer.telephone}}</p>
+{% endfor %}
+    <br>
+    {{ message }}
+</div>
+</body>
+{% endblock %}
+</html>
+
