@@ -22,6 +22,45 @@
   z-index: 100;
 }
 
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scrolled .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+  background-color: #cbbcb1;
+}
+
+.mask-custom {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, .15);
+}
+
+.nav-item{
+    font-family: Amatic SC !important;
+    font-size: 40px;
+}
+
+.nav-brand{
+    font-family: Amatic SC !important;
+    font-size: 2.5em;
+}
+
+.navbar{
+  background-color:green;
+}
+
 .res{
   max-width: 100%;
   height: auto;
@@ -139,7 +178,7 @@ margin-bottom: 10px;
 }
 
 .social-icons .fa {
-font-size: 1.8em;
+font-size: 3em;
 }
 
 .social-icons .fa {
@@ -148,30 +187,41 @@ height: 50px;
 line-height: 50px;
 text-align: center;
 color: red;
+font-size:3em;
 }
 
 .social-icons.icon-circle .fa{
-border-radius: 50%;
+border-radius: 90%;
 }
 
 .social-icons .fa-facebook{
   background-color:#3C599F;
+  font-size:3em;
 }
 
 .social-icons .fa-instagram{
   background-color:#A1755C;
+  font-size:3em;
 }
 
 .social-icons .fa-twitter{
   background-color:#32CCFE;
+  font-size:3em;
 }
 
-.sticky {
+
+
+/*.sticky {
   position: sticky;
   top:10px;
   z-index: 100;
-}
+}*/
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 .carouselProperties, .carouselProperties img{
   height: 450px !important;
   width: 100% !important;
@@ -247,3 +297,7 @@ html {
   font-family: 'Roboto', sans-serif;
   }
 .carousel-item img {width: 100%; height: 200px;}
+
+#bootstrap-overrides navbar-brand {
+height: 0px
+}

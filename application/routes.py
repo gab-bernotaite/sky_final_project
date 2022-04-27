@@ -113,17 +113,17 @@ def customer_and_order(customer_id):
 
 
 
-@app.route('/customerorder/<int:customer_id>', methods=['GET'])
-def customer_and_order(customer_id):
-    error = ""
-    customer = Customer.query.get(customer_id)
-    order = Order.query.get(customer_id)
-    # cars= person.cars
-    if not customer:
-        error = "There is no person with ID: " + str(customer_id)
-        print(customer)
-        print()
-    return render_template('customer_order.html', customer=customer, order=order, message=error, title="Customer and Order Info")
+# @app.route('/customerorder/<int:customer_id>', methods=['GET'])
+# def customer_and_order(customer_id):
+#     error = ""
+#     customer = Customer.query.get(customer_id)
+#     order = Order.query.get(customer_id)
+#     # cars= person.cars
+#     if not customer:
+#         error = "There is no person with ID: " + str(customer_id)
+#         print(customer)
+#         print()
+#     return render_template('customer_order.html', customer=customer, order=order, message=error, title="Customer and Order Info")
 
 
 # @app.route('/customerorder/<int:customer_id>', methods=['GET'])
