@@ -1,6 +1,7 @@
 from flask import render_template, request
 from application import app, db
 from application.forms import QueryForm
+from application.forms import Calculator
 from application.models import Customer, Order
 
 
@@ -61,6 +62,17 @@ def contact():
             db.session.commit()
             return 'Thank you!'
     return render_template('contact.html', title='Get In Touch', form=form, message=error)
+
+
+@app.route('/calculator', methods=['GET', 'POST'])
+def calculator():
+    form = Calculator()
+    error = ""
+    # Distance = input()
+    # Duration = input()
+    # no_people = input()
+    return render_template('calculator.html', title='Calculator', form=form, message=error)
+
 
 @app.route('/pricing')
 def pricing():
