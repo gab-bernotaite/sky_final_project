@@ -6,7 +6,7 @@ class Customer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(50), nullable=False)
     fullname = db.Column(db.String(50), nullable=False)
-    telephone = db.Column(db.String(15), nullable=True)
+    telephone = db.Column(db.String(15), nullable=False)
     Custom_Order = db.relationship('Order', backref='customer')
 
 
