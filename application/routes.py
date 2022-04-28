@@ -33,6 +33,7 @@ def portraits():
 def weddings():
     return render_template('weddings.html', title='Weddings')
 
+
 @app.route('/packages', methods=['GET', 'POST'])
 def packages():
     form = Calculator()
@@ -49,6 +50,23 @@ def packages():
 
     return render_template('packages.html', title='Calculator', form=form, message=error)
     # return render_template('packages.html', title='Packages')
+
+# @app.route('/packages')
+# def packages():
+#     return render_template('packages.html', title='Packages')
+
+
+# @app.route('/packages')
+# def packages():
+#     form = Calculator()
+#     error = ""
+#     Distance = input()
+#     Duration = input()
+    # no_people = input()
+    # return render_template('packages.html', title='Calculator', form=form, message=error)
+    # return render_template('packages.html', title='Packages')
+
+
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
@@ -172,4 +190,13 @@ def customer_order(customer_id):
 
 
 
+
+# @app.route('/calculator', methods=['GET', 'POST'])
+# def calculator():
+#     form = Calculator()
+#     error = ""
+#     Distance = input()
+#     Duration = input()
+#     no_people = input()
+    # return render_template('calculator.html', title='Calculator', form=form, message=error)
 

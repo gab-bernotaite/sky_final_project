@@ -27,3 +27,21 @@ class Calculator(FlaskForm):
     duration = IntegerField('by the hour')
     no_people = IntegerField('Number of people: ')
     calc = SubmitField('Get Quote')
+    # distance = SelectField(u'Distance',
+    #                        choices=[('Select', 'Select'), ('>10 Miles ', '>10 Miles '),
+    #                                 ('11>50 Miles ', '11>50 Miles '),
+    #                                 ('51>150 Miles ', '51>150 Miles ')])
+    # duration = SelectField(u'Duration',
+    #                        choices=[('Select', 'Select'), ('30 mins ', '30 mins '),
+    #                                 ('1 hr ', '1 hr '),
+    #                                 ('1.5 hrs ', '1.5 hrs '), ('2 hrs ', '2 hrs '),
+    #                                 ('2.5 hrs ', '2.5 hrs '), ('3 hrs ', '3 hrs '),
+    #                                 ('3.5 hrs ', '3.5 hrs '), ('4 hrs ', '4 hrs '),
+    #                                 ('4.5 hrs ', '4.5 hrs '), ('5 hrs ', '5 hrs '),
+    #                                 ('5.5 hrs ', '5.5 hrs '), ('6 hrs ', '6 hrs '),
+    #                                 ('6.5 hrs ', '6.5 hrs '), ('7 hrs ', '7 hrs '),
+    #                                 ('7.5 hrs ', '7.5 hrs '), ('8 hrs ', '8 hrs '),
+    #                                 ('8.5 hrs ', '8.5 hrs '), ('9 hrs ', '9 hrs '),
+    #                                 ('9.5 hrs ', '9.5 hrs '), ('10 hrs ', '10 hrs ')])
+    # no_people = StringField('Number of people: ')
+
