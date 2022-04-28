@@ -45,6 +45,7 @@ def packages():
         final_result = '£' + str(result)
         # return 'result: %s' % result
         return render_template('packages.html', title='Calculator', result=final_result, form=form, message=error)
+        # return 'Result: %s' % result
 
     return render_template('packages.html', title='Calculator', form=form, message=error)
     # return render_template('packages.html', title='Packages')
@@ -157,7 +158,7 @@ def show_people():
 @app.route('/customerorder/<int:customer_id>', methods=['GET'])
 def customer_order(customer_id):
     error = ""
-    customer = Order.query.get(customer_id)
+    customer = Customer.query.get(customer_id)
     # order = customer.orders
     if not customer:
         error = "There is no person with ID: " + str(customer_id)
@@ -167,11 +168,8 @@ def customer_order(customer_id):
     return render_template('customer_order.html', customer=customer, message=error, title="Customer Order Info")
 
 
-@app.route('/order', methods=['GET'])
-def show_order():
 
-    order = Order.query.all()
 
-    return render_template('orders.html', order=order)
+
 
 
