@@ -25,13 +25,19 @@
     color: #463f3a;
     }
 
-    h5, h6 {
+    h5, h6, h3 {
     font-family: Amatic SC, cursive;
     font-size: 60px;
     color: #463f3a;
     }
 
     p, li {
+    color: #463f3a;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    }
+
+    .calculator {
     color: #463f3a;
     font-family: 'Roboto', sans-serif;
     }
@@ -208,8 +214,31 @@
 
 <br>
 <br>
+<!--custom packages-->
+<div class="container overflow-hidden" id="package_calculator">
+    <div class="row equal gy-5 text-center justify-content-md-center align-text-middle">
+        <h3 style="font-size: 60px;">
+            Calculate the cost of a custom package!
+        </h3>
+        <p style="font-size: 18px;">
+            This quote is only an estimate, for a true quote, please <a style="font-size: 18px;" href="/contact">contact us</a>
+        </p>
+        <div class="calculator">
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                {{ form.distance.label }} {{ form.distance }} <br><br>
+                {{ form.duration.label }} {{ form.duration }} <br><br>
+                {{ form.no_people.label }} {{ form.no_people }} <br><br>
+            </form>
+        </div>
+    </div>
+</div>
 
 
+<br>
+<br>
+<br>
+<br>
 <!--container for booking and payment-->
 
 <!--how do I make these containers rounded?-->
@@ -268,20 +297,6 @@
             </div>
         </div>
     </div>
-</div>
-<h3>
-  Calculate:
-</h3>
-<h4>
-     <small class="text-muted">This is only an estimate, to get a true quote please contact us via our Contact Form.</small>
-</h4>
-<div class="calculator">
-    <form method="POST" action="">
-        {{ form.hidden_tag() }}
-        {{ form.distance.label }} {{ form.distance }} <br><br>
-        {{ form.duration.label }} {{ form.duration }} <br><br>
-        {{ form.no_people.label }} {{ form.no_people }} <br><br>
-    </form>
 </div>
 <br>
 <br>
