@@ -20,4 +20,12 @@ class Order(db.Model):
     recommend = db.Column(db.String(20), nullable=False)
     customer_id = db.Column(db.Integer, db.ForeignKey('customer.id'), nullable=False)
 
+# class Calculator(db.Model):
+#     quote_id = db.Column(db.Integer, primary_key=True)
+#     distance = db.Column(db.Integer, nullable=False)
+#     duration = db.Column(db.Integer, nullable=False)
+#     no_people = db.Column(db.Integer, nullable=False)
+
+
+
 

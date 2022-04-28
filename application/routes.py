@@ -33,13 +33,18 @@ def portraits():
 def weddings():
     return render_template('weddings.html', title='Weddings')
 
-@app.route('/packages')
+@app.route('/packages', methods=['GET', 'POST'])
 def packages():
     form = Calculator()
     error = ""
-    # Distance = input()
-    # Duration = input()
-    # no_people = input()
+    if request.method == 'POST':
+        distance = form.distance.data
+        duration = form.duration.data
+        no_people = form.no_people.data
+        result = (distance * 2) + (duration * 150) + (no_people * 30)
+        return 'result: %s' % result
+
+
     return render_template('packages.html', title='Calculator', form=form, message=error)
     # return render_template('packages.html', title='Packages')
 
@@ -70,14 +75,18 @@ def contact():
     return render_template('contact.html', title='Get In Touch', form=form, message=error)
 
 
-@app.route('/calculator', methods=['GET', 'POST'])
-def calculator():
-    form = Calculator()
-    error = ""
-    # Distance = input()
-    # Duration = input()
-    # no_people = input()
-    return render_template('calculator.html', title='Calculator', form=form, message=error)
+# @app.route('/calculator', methods=['GET', 'POST'])
+# def calculator():
+#     form = Calculator()
+#     error = ""
+#     if request.method == 'POST':
+#         distance = form.distance.data
+#         duration = form.duration.data
+#         no_people = form.no_people.data
+#         result = (distance * 2) + (duration * 150) + (no_people * 30)
+#         return 'result: %s' % result
+#
+#     return render_template('calculator.html', title='Calculator', form=form, message=error)
 
 
 @app.route('/pricing')
@@ -117,17 +126,17 @@ def show_people():
         print(people)
     return render_template('people.html', people=people, message=error)
 
-@app.route('/customerorder/<id>', methods=['GET'])
-def customer_and_order(id):
-    error = ""
-    customer = Customer.query.get(id)
-    order = Order.query.get(id)
-    # cars= person.cars
-    if not customer:
-        error = "There is no person with ID: " + str(id)
-        print(customer)
-        print(order)
-    return render_template('customer_order.html', customer=customer, order=order, message=error, title="Customer and Order Info")
+# @app.route('/customerorder/<id>', methods=['GET'])
+# def customer_and_order(id):
+#     error = ""
+#     customer = Customer.query.get(id)
+#     order = Order.query.get(id)
+#     # cars= person.cars
+#     if not customer:
+#         error = "There is no person with ID: " + str(id)
+#         print(customer)
+#         print(order)
+#     return render_template('customer_order.html', customer=customer, order=order, message=error, title="Customer and Order Info")
 
 
 
