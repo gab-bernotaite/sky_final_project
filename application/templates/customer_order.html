@@ -10,7 +10,7 @@
     </ul>
 </div>
 <div>
-    {% for order in customer.orders %}
+        {% for order in customer.orders %}
     <ul>
         <li>Order details: {{order.project_date}} Location: cd{{order.location}}  Budget: {{order.budget}}
             Details: {{order.details}}  Services: {{order.services}}
@@ -19,10 +19,4 @@
 {% endfor %}
 </div>
 {% endblock %}
-{% block footer_content %}
-<footer>
-     &copy; 2021
-</footer>
-{% endblock %}
-
 
