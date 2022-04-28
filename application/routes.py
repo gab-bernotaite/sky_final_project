@@ -42,8 +42,9 @@ def packages():
         duration = form.duration.data
         no_people = form.no_people.data
         result = (distance * 2) + (duration * 150) + (no_people * 30)
-        return 'result: %s' % result
-
+        final_result = '£' + str(result)
+        # return 'result: %s' % result
+        return render_template('packages.html', title='Calculator', result=final_result, form=form, message=error)
 
     return render_template('packages.html', title='Calculator', form=form, message=error)
     # return render_template('packages.html', title='Packages')
