@@ -21,21 +21,9 @@ class QueryForm(FlaskForm):
                                      ('Referral', 'Referral'), ('Other', 'Other')])
     submit = SubmitField('Submit')
 
+
 class Calculator(FlaskForm):
-    # distance = SelectField(u'Distance',
-    #                        choices=[('Select', 'Select'), ('> 10 Miles ', '> 10 Miles '),
-    #                                 ('11 > 50 Miles ', '11 > 50 Miles '),
-    #                                 ('51 > 150 Miles ', '51 > 150 Miles ')])
-    # duration = SelectField(u'Duration',
-    #                        choices=[('Select', 'Select'),
-    #                                 ('1 hr ', '1 hr '), ('2 hrs ', '2 hrs '),
-    #                                 ('3 hrs ', '3 hrs '), ('4 hrs ', '4 hrs '),
-    #                                 ('5 hrs ', '5 hrs '), ('6 hrs ', '6 hrs '),
-    #                                 ('7 hrs ', '7 hrs '), ('8 hrs ', '8 hrs '),
-    #                                 ('9 hrs ', '9 hrs '), ('10 hrs ', '10 hrs ')])
     distance = IntegerField('This is the distance')
     duration = IntegerField('by the hour')
-
-
     no_people = IntegerField('Number of people: ')
     calc = SubmitField('Get Quote')

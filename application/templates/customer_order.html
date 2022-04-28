@@ -10,11 +10,11 @@
     </ul>
 </div>
 <div>
-        {% for order in customer.orders %}
+        {% for order in customer.Custom_Orders %}
     <ul>
-        <li>Order details: {{order.project_date}} Location: cd{{order.location}}  Budget: {{order.budget}}
-            Details: {{order.details}}  Services: {{order.services}}
-            recommend: {{order.recommend}}</li>
+        <li>Order details: {{order.project_date}} <br> Location: {{order.location}} <br> Budget: {{order.budget}}
+            <br> Details: {{order.details}}  <br> Services: {{order.services}} <br>
+            Recommend: {{order.recommend}}</li>
     </ul>
 {% endfor %}
 </div>
