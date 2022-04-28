@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:ital,wght@0,100;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:wght@100&display=swap');
+
 body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Style the Image Used to Trigger the Modal */
@@ -170,4 +174,16 @@ img.hover-shadow {
     .modal-content {
         width: 100%;
     }
+}
+
+.sticky{
+  position: sticky;
+  top:10px;
+  z-index: 100;
+}
+
+.sticky{
+position: fixed;
+top: 0;
+width: 100%;
 }
