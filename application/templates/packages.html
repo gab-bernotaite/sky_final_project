@@ -221,11 +221,12 @@
             This quote is only an estimate, for a true quote, please <a style="font-size: 18px;" href="/contact">contact us</a>
         </p>
         <div class="calculator">
-            <form method="POST" action="">
+            <form method="POST" action="/calculate estimate">
                 {{ form.hidden_tag() }}
-                {{ form.distance.label }} {{ form.distance }} <br><br>
-                {{ form.duration.label }} {{ form.duration }} <br><br>
+                {{ form.distance.label }} {{ form.distance }} <br>
+                {{ form.duration.label }} {{ form.duration }} <br>
                 {{ form.no_people.label }} {{ form.no_people }} <br><br>
+                <input type="submit" value="Submit">
             </form>
         </div>
     </div>

@@ -37,6 +37,7 @@ def weddings():
 # def packages():
 #     return render_template('packages.html', title='Packages')
 
+
 @app.route('/packages')
 def packages():
     form = Calculator()
@@ -46,6 +47,7 @@ def packages():
     # no_people = input()
     return render_template('packages.html', title='Calculator', form=form, message=error)
     # return render_template('packages.html', title='Packages')
+
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
@@ -168,4 +170,13 @@ def show_order():
 
     return render_template('orders.html', order=order)
 
+
+# @app.route('/calculator', methods=['GET', 'POST'])
+# def calculator():
+#     form = Calculator()
+#     error = ""
+    Distance = input()
+    Duration = input()
+    no_people = input()
+    # return render_template('calculator.html', title='Calculator', form=form, message=error)
 
