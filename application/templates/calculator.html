@@ -10,14 +10,7 @@
 
 {% extends "layout.html" %}
 {% block body_content %}
-<div class="calculator">
-    <form method="POST" action="">
-        {{ form.hidden_tag() }}
-        {{ form.distance.label }} {{ form.distance }}
-        {{ form.duration.label }} {{ form.duration }}
-        {{ form.no_people.label }} {{ form.no_people }}
-    </form>
-</div>
+
 
  <h3>
   Calculate:
@@ -25,10 +18,18 @@
 <h4>
      <small class="text-muted">This is only an estimate, to get a true quote please contact us via our Contact Form.</small>
 </h4>
-<br>
 <div class="calculator">
-    <label for="Distance">Distance from London (An estimate is fine)<br> <strong>In Miles to the closest full mile:</strong></label>
-        <input type="int" id="Distance" name="Distance" value=""><br><br>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.distance.label }} {{ form.distance }} <br><br>
+        {{ form.duration.label }} {{ form.duration }} <br><br>
+        {{ form.no_people.label }} {{ form.no_people }} <br><br>
+    </form>
+</div>
+<br>
+<!--<div class="calculator">-->
+<!--    <label for="Distance">Distance from London (An estimate is fine)<br> <strong>In Miles to the closest full mile:</strong></label>-->
+<!--        <input type="int" id="Distance" name="Distance" value=""><br><br>-->
 
 </div>
 

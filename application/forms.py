@@ -38,3 +38,5 @@ class Calculator(FlaskForm):
                                     ('7.5 hrs ', '7.5 hrs '), ('8 hrs ', '8 hrs '),
                                     ('8.5 hrs ', '8.5 hrs '), ('9 hrs ', '9 hrs '),
                                     ('9.5 hrs ', '9.5 hrs '), ('10 hrs ', '10 hrs ')])
+
+    no_people = StringField('Please enter the number of people: ')
