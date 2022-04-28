@@ -3,168 +3,11 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>WEDDINGS</title>
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
-/* Style the Image Used to Trigger the Modal */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0 10px;
-}
-
-.image-container {
-  width: 100%;
-  height: 70%;
-  columns: 4;
-}
-
-.myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    max-width: 100%;
-    padding: 1px;
-    }
-
-.myImg:hover {opacity: 0.7;}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (Image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    position: relative;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal-content, #caption {
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)}
-    to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Hide the slides by default */
-.mySlides {
-  display: none;
-}
-.image-wrapper {
-  position: absolute;
-}
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 20px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-}
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-img.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-img.hover-shadow {
-  transition: 0.3s;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: relative;
-  top: 0;
-}
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
-}
-</style>
 
 </head>
 <body>
+{% extends "layout.html" %}
+{% block body_content %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <!-- Trigger the Modal -->
@@ -174,7 +17,7 @@ img.hover-shadow {
 <img class="myImg" src="static/images/weddings/istockphoto-940217166-170667a.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/Alex-Claudia.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/Hindu_wedding.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
-<img class="myImg" src="static/images/weddings/brooklyn_wedding.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+<img class="myImg" src="static/images/weddings/magical-ceremony-ambience.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/620de348d1260.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/wedding.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/nadia-manjarrez.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow">
@@ -184,14 +27,14 @@ img.hover-shadow {
 <img class="myImg" src="static/images/weddings/Asian+Wedding.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/Decorium-London.jpg" onclick="openModal();currentSlide(14)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/alyssa-alex.jpg" onclick="openModal();currentSlide(15)" class="hover-shadow">
-<img class="myImg" src="static/images/weddings/images.jpg." onclick="openModal();currentSlide(16)" class="hover-shadow">
+<img class="myImg" src="static/images/weddings/mehndhi.jpg" onclick="openModal();currentSlide(16)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/coombe-abbey.jpg" onclick="openModal();currentSlide(17)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/istockphoto-1095795818-612x612.jpg" onclick="openModal();currentSlide(18)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/AnnaHolcombe.jpg" onclick="openModal();currentSlide(19)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/top-slider.jpg" onclick="openModal();currentSlide(20)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/download.jpg" onclick="openModal();currentSlide(21)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/MK4.jpg" onclick="openModal();currentSlide(22)" class="hover-shadow">
-<img class="myImg" src="static/images/weddings/bliss.jpg" onclick="openModal();currentSlide(23)" class="hover-shadow">
+<img class="myImg" src="static/images/weddings/istockphoto-1334549585-170667a.jpg" onclick="openModal();currentSlide(23)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/MapCompass.jpg" onclick="openModal();currentSlide(24)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/wedding_1640889655048_1640889677840.jpg" onclick="openModal();currentSlide(25)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/wedding-vows.jpg" onclick="openModal();currentSlide(26)" class="hover-shadow">
@@ -209,11 +52,11 @@ img.hover-shadow {
 <img class="myImg" src="static/images/weddings/sq-19e700c78c9d436c87b7821f68a050e1.jpg" onclick="openModal();currentSlide(38)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/wedding6.jpg" onclick="openModal();currentSlide(39)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/JessGeorge-115-867x1300.jpg" onclick="openModal();currentSlide(40)" class="hover-shadow">
-<img class="myImg" src="static/images/weddings/images (1).jpg" onclick="openModal();currentSlide(41)" class="hover-shadow">
+<img class="myImg" src="static/images/weddings/Lush_Imaging.jpg" onclick="openModal();currentSlide(41)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/wedding-at-home.jpg" onclick="openModal();currentSlide(42)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/19203-5-flaura-botanica.jpg" onclick="openModal();currentSlide(43)" class="hover-shadow">
 <img class="myImg" src="static/images/weddings/Walk.jpg" onclick="openModal();currentSlide(44)" class="hover-shadow">
-<img class="myImg" src="static/images/weddings/321a793a67559ae70ad3f09e274d8036.jpg" onclick="openModal();currentSlide(45)" class="hover-shadow">
+<img class="myImg" src="static/images/weddings/815675_1i2a8611.jpg" onclick="openModal();currentSlide(45)" class="hover-shadow">
 </div> <!-- end image-container div -->
 
 
@@ -224,11 +67,11 @@ img.hover-shadow {
 
     <div class="mySlides">
         <div class="numbertext"> 1 / 45 </div>
-        <img src="static/images/weddings/wedding-dresses.bonita.jpg" style="width 100%">
+        <img src="static/images/weddings/wedding-dresses.bonita.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 2 / 45 </div>
-        <img src="static/images/weddings/beach-wedding.jpg" style="width 100%">
+        <img src="static/images/weddings/beach-wedding.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 3 / 45 </div>
@@ -244,163 +87,163 @@ img.hover-shadow {
     </div>
     <div class="mySlides">
         <div class="numbertext"> 6 / 45 </div>
-        <img src="static/images/weddings/brooklyn_wedding.jpg" style="width:100%">
+        <img src="static/images/weddings/magical-ceremony-ambience.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 7 / 45 </div>
-        <img src="static/images/weddings/620de348d1260.jpg" style="width 100%">
+        <img src="static/images/weddings/620de348d1260.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 8 / 45 </div>
-        <img src="static/images/weddings/wedding.jpg" style="width 100%">
+        <img src="static/images/weddings/wedding.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 9 / 45 </div>
-        <img src="static/images/weddings/nadia-manjarrez.jpg" style="width 100%">
+        <img src="static/images/weddings/nadia-manjarrez.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 10 / 45 </div>
-        <img src="static/images/weddings/photo-1596744743105-b1e229d13036.jpg" style="width 100%">
+        <img src="static/images/weddings/photo-1596744743105-b1e229d13036.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 11 / 45 </div>
-        <img src="static/images/weddings/2019_11_15_82438_1573807361.jpg" style="width 100%">
+        <img src="static/images/weddings/2019_11_15_82438_1573807361.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 12 / 45 </div>
-        <img src="static/images/weddings/WeddingsCover-1400x935.jpg" style="width 100%">
+        <img src="static/images/weddings/WeddingsCover-1400x935.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 13 / 45 </div>
-        <img src="static/images/weddings/Asian+Wedding.jpg" style="width 100%">
+        <img src="static/images/weddings/Asian+Wedding.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 14/ 45 </div>
-        <img src="static/images/weddings/Decorium-London.jpg" style="width 100%">
+        <img src="static/images/weddings/Decorium-London.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 15 / 45 </div>
-        <img src="static/images/weddings/alyssa-alex.jpg" style="width 100%">
+        <img src="static/images/weddings/alyssa-alex.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 16 / 45 </div>
-        <img src="static/images/weddings/images.jpg." style="width 100%">
+        <img src="static/images/weddings/mehndhi.jpg" style="width:100%">
     </div>
      <div class="mySlides">
         <div class="numbertext"> 17 / 45 </div>
-        <img src="static/images/weddings/coombe-abbey.jpg" style="width 100%">
+        <img src="static/images/weddings/coombe-abbey.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 18 / 45 </div>
-        <img src="static/images/weddings/istockphoto-1095795818-612x612.jpg" style="width 100%">
+        <img src="static/images/weddings/istockphoto-1095795818-612x612.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 19 / 45 </div>
-        <img src="static/images/weddings/AnnaHolcombe.jpg" style="width 100%">
+        <img src="static/images/weddings/AnnaHolcombe.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 20 / 45 </div>
-        <img src="static/images/weddings/top-slider.jpg" style="width 100%">
+        <img src="static/images/weddings/top-slider.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 21 / 45 </div>
-        <img src="static/images/weddings/download.jpg" style="width 100%">
+        <img src="static/images/weddings/download.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 22 / 45 </div>
-        <img src="static/images/weddings/MK4.jpg" style="width 100%">
+        <img src="static/images/weddings/MK4.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 23 / 45 </div>
-        <img src="static/images/weddings/bliss.jpg" style="width 100%">
+        <img src="static/images/weddings/istockphoto-1334549585-170667a.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 24 / 45 </div>
-        <img src="static/images/weddings/MapCompass.jpg" style="width 100%">
+        <img src="static/images/weddings/MapCompass.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 25 / 45 </div>
-        <img src="static/images/weddings/wedding_1640889655048_1640889677840.jpg" style="width 100%">
+        <img src="static/images/weddings/wedding_1640889655048_1640889677840.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 26 / 45 </div>
-        <img src="static/images/weddings/wedding-vows.jpg" style="width 100%">
+        <img src="static/images/weddings/wedding-vows.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 27 / 45 </div>
-        <img src="static/images/weddings/30-scaled.jpg" style="width 100%">
+        <img src="static/images/weddings/30-scaled.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 28 / 45 </div>
-        <img src="static/images/weddings/help-you-to-see-whats-possible.jpg" style="width 100%">
+        <img src="static/images/weddings/help-you-to-see-whats-possible.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 29 / 45 </div>
-        <img src="static/images/weddings/photo-1591164473007-703c2c1c4905.jpg" style="width 100%">
+        <img src="static/images/weddings/photo-1591164473007-703c2c1c4905.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 30 / 45 </div>
-        <img src="static/images/weddings/main-2.jpg" style="width 100%">
+        <img src="static/images/weddings/main-2.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 31 / 45 </div>
-        <img src="static/images/weddings/shutterstock_764321713.jpg" style="width 100%">
+        <img src="static/images/weddings/shutterstock_764321713.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 32 / 45 </div>
-        <img src="static/images/weddings/62787-igor-2.jpg" style="width 100%">
+        <img src="static/images/weddings/62787-igor-2.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 33 / 45 </div>
-        <img src="static/images/weddings/photo-1583939003579-730e3918a45a.jpg"  style="width 100%">
+        <img src="static/images/weddings/photo-1583939003579-730e3918a45a.jpg"  style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 34 / 45 </div>
-        <img src="static/images/weddings/Bride-at-pennyhill-park-wedding-venue.jpg" style="width 100%">
+        <img src="static/images/weddings/Bride-at-pennyhill-park-wedding-venue.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 35 / 45 </div>
-        <img src="static/images/weddings/Crier-8-copy.jpg" style="width 100%">
+        <img src="static/images/weddings/Crier-8-copy.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 36 / 45 </div>
-        <img src="static/images/weddings/Osmaston-Park.jpg" style="width 100%">
+        <img src="static/images/weddings/Osmaston-Park.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 37 / 45 </div>
-        <img src="static/images/weddings/Opu+Sultan+Photography+Asian+wedding+photography.jpg" style="width 100%">
+        <img src="static/images/weddings/Opu+Sultan+Photography+Asian+wedding+photography.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 38 / 45 </div>
-        <img src="static/images/weddings/sq-19e700c78c9d436c87b7821f68a050e1.jpg" style="width 100%">
+        <img src="static/images/weddings/sq-19e700c78c9d436c87b7821f68a050e1.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 39 / 45 </div>
-        <img src="static/images/weddings/wedding6.jpg" style="width 100%">
+        <img src="static/images/weddings/wedding6.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 40 / 45 </div>
-        <img src="static/images/weddings/JessGeorge-115-867x1300.jpg" style="width 100%">
+        <img src="static/images/weddings/JessGeorge-115-867x1300.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 41 / 45 </div>
-        <img src="static/images/weddings/images (1).jpg" style="width 100%">
+        <img src="static/images/weddings/Lush_Imaging.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 42 / 45 </div>
-        <img src="static/images/weddings/wedding-at-home.jpg" style="width 100%">
+        <img src="static/images/weddings/wedding-at-home.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 43 / 45 </div>
-        <img src="static/images/weddings/19203-5-flaura-botanica.jpg" style="width 100%">
+        <img src="static/images/weddings/19203-5-flaura-botanica.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 44 / 45 </div>
-        <img src="static/images/weddings/Walk.jpg" style="width 100%">
+        <img src="static/images/weddings/Walk.jpg" style="width:100%">
     </div>
     <div class="mySlides">
         <div class="numbertext"> 45 / 45 </div>
-        <img src="static/images/weddings/321a793a67559ae70ad3f09e274d8036.jpg" style="width 100%">
+        <img src="static/images/weddings/815675_1i2a8611.jpg" style="width:100%">
     </div>
 
 
@@ -446,7 +289,7 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>
-
+{% endblock %}
 </body>
 
 </html>

@@ -21,6 +21,7 @@ class QueryForm(FlaskForm):
                                      ('Referral', 'Referral'), ('Other', 'Other')])
     submit = SubmitField('Submit')
 
+
 class Calculator(FlaskForm):
     distance = SelectField(u'Distance',
                            choices=[('Select', 'Select'), ('>10 Miles ', '>10 Miles '),
@@ -38,3 +39,4 @@ class Calculator(FlaskForm):
                                     ('7.5 hrs ', '7.5 hrs '), ('8 hrs ', '8 hrs '),
                                     ('8.5 hrs ', '8.5 hrs '), ('9 hrs ', '9 hrs '),
                                     ('9.5 hrs ', '9.5 hrs '), ('10 hrs ', '10 hrs ')])
+    no_people = StringField('Number of people: ')

@@ -33,9 +33,19 @@ def portraits():
 def weddings():
     return render_template('weddings.html', title='Weddings')
 
+# @app.route('/packages')
+# def packages():
+#     return render_template('packages.html', title='Packages')
+
 @app.route('/packages')
 def packages():
-    return render_template('packages.html', title='Packages')
+    form = Calculator()
+    error = ""
+    # Distance = input()
+    # Duration = input()
+    # no_people = input()
+    return render_template('packages.html', title='Calculator', form=form, message=error)
+    # return render_template('packages.html', title='Packages')
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
